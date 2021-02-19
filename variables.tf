@@ -4,6 +4,8 @@ variable "name" {
   default = "sandbox1"
 }
 
+variable "bucket_name" {}
+
 #
 # the tags for this module
 #

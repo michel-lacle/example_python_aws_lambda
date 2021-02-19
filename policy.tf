@@ -9,8 +9,8 @@ data "aws_iam_policy_document" "this" {
     ]
 
     resources = [
-      "arn:aws:s3:::yourbuckethere",
-      "arn:aws:s3:::yourbuckethere/*"
+      "arn:aws:s3:::${var.bucket_name}",
+      "arn:aws:s3:::${var.bucket_name}/*"
     ]
 
     sid = "s3access"

@@ -15,6 +15,20 @@ data "aws_iam_policy_document" "this" {
 
     sid = "s3access"
   }
+
+  statement {
+    effect = "Allow"
+
+    actions = [
+      "logs:*"
+    ]
+
+    resources = [
+      "*"
+    ]
+
+    sid = "cloudwatch"
+  }
 }
 
 resource "aws_iam_role_policy" "this" {

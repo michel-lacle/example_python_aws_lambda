@@ -88,10 +88,10 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
     lambda_function_arn = aws_lambda_function.this.arn
 
     events = [
-      "s3:ObjectCreated:*"]
+      "s3:*:*"]
 
-    filter_prefix = "foo/foo/"
-    filter_suffix = ".zip"
+    #filter_prefix = "foo/foo/"
+    #filter_suffix = ".zip"
   }
 
   depends_on = [
